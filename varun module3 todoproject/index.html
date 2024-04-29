@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        width: 100%;
+        text-align: center;
+        background: black;
+        color: #ffffff;
+        position: fixed;
+        top: 0;
+    }
+
+    label {
+        display: block;
+    }
+
+    input[type=text],
+    input[type=number] {
+        width: 100%;
+        font-size: 20px;
+        margin: auto;
+    }
+
+    #add-form,
+    #search-form {
+        width: 20%;
+        margin: auto;
+        padding: 10px;
+        font-size: 20px;
+        text-align: center;
+        border: 5px solid rgb(217, 217, 11);
+        background-color: yellow;
+    }
+
+    #add-form {
+        margin-top: 70px;
+    }
+
+    .todos {
+        width: 70%;
+        margin: auto;
+        margin-top: 33px;
+    }
+
+    #add-form *,
+    #search-form * {
+        display: block;
+        margin: 10px auto;
+    }
+</style>
+
+<body>
+    <main>
+        <h1>TASKS</h1>
+        <form id="add-form">
+            <h2>add a new todo</h2>
+            <label>Enter the user Id</label>
+            <input type="number" id="userId">
+            <!-- <label>Enter the Id</label> -->
+            <!-- <input type="number" id="Id"> -->
+            <label>Enter the title</label>
+            <input type="text" id="title">
+            <button type="submit">submit</button>
+        </form>
+        <form id="search-form">
+            <label>search here</label>
+            <input type="text" id="search-bar">
+        </form>
+        <div class="todos">
+        </div>
+    </main>
+    <script src="script.js" type="module"> </script>
+</body>
+
+</html>
