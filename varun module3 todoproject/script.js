@@ -77,13 +77,10 @@ function displayTodos(todolist) {
 
 const form = document.querySelector("form");
 form.addEventListener("submit", (event) => {
-  console.log("hello");
   const todos = document.querySelectorAll(".todo-wrapper-div");
   const searchBox = document.querySelector("#search-bar");
   searchBox.value = ""; //value is used for a text input and innerhtml is used for the value of tags
   const todoUserId = document.getElementById("userId");
-  console.log("hello");
-  console.log("new id is", savedtodos[savedtodos.length - 1].id);
   const todoId = savedtodos[savedtodos.length - 1].id + 1;
   const todoTitle = document.getElementById("title");
   const addTodo = {
@@ -103,14 +100,12 @@ function removeFunctionality(tododivs) {
       //event.target is the element on which we are applying the onclick or on which we will click
       event.target.parentElement.parentElement.parentElement.remove();
       const idToBeDeleted = event.target.getAttribute("id");
-      console.log(idToBeDeleted);
       for (item in savedtodos) {
         if (savedtodos[item].id == idToBeDeleted) {
-          console.log(savedtodos.splice(item, 1));
+          savedtodos.splice(item, 1);
         }
       }
       localStorage.setItem("todos", JSON.stringify(savedtodos));
-      console.log(savedtodos);
     });
   });
 }
